@@ -12,10 +12,33 @@
 
 <figure><img src=".gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>图 1-2</p></figcaption></figure>
 
-1. 用户通过域名访问网站，如 <mark style="color:blue;">api.mysite.com</mark>。通常来说，域名系统（DNS）由第三方提供的付费服务，而不会由我们的服务器托管。
-2.
-3. 3
-4. 4
+1. 用户通过域名访问网站，如 <mark style="color:blue;">api.mysite.com</mark>。通常来说，域名系统（ DNS ）由第三方提供的付费服务，而不会由我们的服务器托管。
+2. 网络传输协议（ IP ）地址返回到浏览器或 mobile 应用。在本例中，被返回的 IP 地址是 15.125.23.214。
+3. 一旦获取到 IP 地址，超文本传输协议（HTTP）<mark style="color:blue;">\[1]</mark> 请求会立即发送到你的 web 服务器上。
+4. web 服务器返回 HTML 页面或者 JSON 响应用以页面渲染。
+
+接下来，让我们观察流量源。到达 web 服务器的流量有 2 种：web 应用与 mobile 应用。
+
+* web 应用：它结合使用服务端语言（Java、Python 等）来响应业务逻辑，存储等，以及客户端语言（HTML、JavaScript 等）来呈现页面。
+* mobile 应用：HTTP 协议是 mobile 应用和 web 服务器的通信协议。由于简单，JSON 是常用的传输数据的 API 响应格式，JSON 格式的 API 响应示例如下：
+
+<pre class="language-json"><code class="lang-json"><strong>// GET /users/12 – Retrieve user object for id = 12
+</strong>{
+    "id": 12,
+    "firstName". "John"
+    "lastName". "Smith".
+    "address": {
+        "streetAddress". "21 2nd Street"
+        "city": "New York"
+        "state": "NY"
+        "postalCode": 10021
+    }
+    "phoneNumbers": [
+        "212 555-1234"
+<strong>        "646 555-4567"
+</strong>    ]
+}
+</code></pre>
 
 ### 数据库
 
