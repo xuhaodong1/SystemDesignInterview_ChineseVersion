@@ -10,7 +10,7 @@
 
 探索请求流和流量源有助于帮助我们理解这些设置，我们首先观察请求流（图 1-2 ）。
 
-<figure><img src=".gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>图 1-2</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>图 1-2</p></figcaption></figure>
 
 1. 用户通过域名访问网站，如 <mark style="color:blue;">api.mysite.com</mark>。通常来说，域名系统（ DNS ）由第三方提供的付费服务，而不会由我们的服务器托管。
 2. 网络传输协议（ IP ）地址返回到浏览器或 mobile 应用。在本例中，被返回的 IP 地址是 15.125.23.214。
@@ -41,4 +41,10 @@
 </code></pre>
 
 ### 数据库
+
+随着用户基数的增长，一台服务器不足以支撑，我们需要多个服务器：一个用于处理 web / mobile 的流量，其他的则用于数据库（图 1-3）。将 web / mobile 流量（网络层）与数据库（数据层）的服务器分隔开有助于让它们独立拓展。
+
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>图 1-3</p></figcaption></figure>
+
+### 如何选择数据库
 
